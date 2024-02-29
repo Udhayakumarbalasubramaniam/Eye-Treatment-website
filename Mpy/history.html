@@ -1,0 +1,54 @@
+<html>
+    <head><title>Please enter your history data</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Foldit:wght@100&display=swap" rel="stylesheet">
+    <script>
+        .s{
+            align:'center';
+            font-family: 'Courgette', cursive;
+font-family: 'Foldit', cursive;
+        }
+        
+        
+        </script></head>
+    <body>
+        <div align="center">
+        <h1>Patient history report</h1></div>
+        <form action="entry.php" method="post">
+            <table border="1" align="center">
+                <tr><td>
+                    <label>
+                    Enter First name</label></td>
+                    <td><input type="text" name="first_name" required></td>
+                </tr>
+                  <tr><td>
+                    <label>
+                    Last name</label></td>
+                    <td><input type="text" name="last_name"></td>
+                </tr>
+                  <tr><td>
+                    <label>
+                   gender</label></td>
+                    <td><input type="radio" name=" gender" value="Male">Male
+                      <input type="radio" name=" gender" value="Female">Female</td>
+                </tr>
+               <tr><td> 
+             <label>
+                    Gmail</label></td>
+                    <td><input type="email" name="gmail" required></td>
+                </tr>
+                 <tr><td> 
+             <label>
+                    Phone</label></td>
+                    <td><input type="phone" name="Phone" required></td>
+                </tr>
+                   <div id="s"><tr><td> 
+             <label>
+                    Submit</label></td>
+                    <td><input type="submit" name="save" value="submt"></td>
+                </tr></div>
+            </table>
+        </form>
+    </body>
+</html>

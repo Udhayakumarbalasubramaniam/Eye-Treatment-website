@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KM Eye Hospital</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ffcc00;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        h1 {
+            color: #ffcc00;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+        }
+
+        a:hover {
+            background-color: #ff9933;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .dark-mode header {
+            background-color: #111;
+        }
+
+        .dark-mode nav {
+            background-color: #444;
+        }
+
+        .dark-mode main {
+            background-color: #222;
+        }
+
+        .dark-mode h1 {
+            color: #ffcc00;
+        }
+
+        .dark-mode p {
+            color: #999;
+        }
+
+        .dark-mode a {
+            background-color: #ffcc00;
+            color: #333;
+        }
+
+        .dark-mode a:hover {
+            background-color: #ff9933;
+            color: #fff;
+        }
+
+        .dark-mode footer {
+            background-color: #111;
+        }
+
+        .dark-mode-toggle {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .dark-mode-toggle .toggle-icon {
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .dark-mode-toggle .toggle-icon:hover {
+            color: #ffcc00;
+        }
+
+        .marquee-container {
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+    <script>
+        function toggleDarkMode() {
+            var body = document.getElementsByTagName("body")[0];
+            body.classList.toggle("dark-mode");
+
+            var header = document.getElementsByTagName("header")[0];
+            header.classList.toggle("dark-mode");
+
+            var nav = document.getElementsByTagName("nav")[0];
+            nav.classList.toggle("dark-mode");
+
+            var main = document.getElementsByTagName("main")[0];
+            main.classList.toggle("dark-mode");
+
+            var footer = document.getElementsByTagName("footer")[0];
+            footer.classList.toggle("dark-mode");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>KM Eye Hospital</h1>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+            <i class="toggle-icon fas fa-moon"></i>
+        </button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="services.html">TREATMENT</a></li>
+            <li><a href="aaa.html">FOR NON ALOPATHY USERS</a></li>
+            <li><a href="prescription.html">PRESCRIPTION</a></li>
+            <li><a href="about.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <p>Get the best eye treatment from our experienced doctors.</p>
+                <p>Discover a brighter world with KM Eye Hospital.</p>
+                <p>Experience exceptional care for your precious eyes.</p>
+                <p>Trust our expertise for all your eye care needs.</p>
+            </div>
+        </div>
+        
+        <h1>Welcome to KM Eye Hospital</h1>
+        <p>Providing exceptional eye care services since 1995.</p>
+        <p>Schedule an appointment with our expert doctors today.</p>
+        <a href="contact.html">Contact Us</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 KM Eye Hospital. All rights reserved.</p>
+    </footer>
+
+    <!-- Include Font Awesome for the moon icon -->
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</body>
+</html>

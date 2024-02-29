@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+  background-image:url("https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG9naW58ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  color:white;
+}
+
+form {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto; 
+  width: 35%;
+}
+
+
+label {
+  font-weight: bold;
+
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#history-list {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 35%;
+  margin:0 auto;
+}
+
+  </style>
+</head>
+
+<body>
+  <h1 text-align="center">Patient's History</h1><br>
+
+  <form id="history-form" action="history1.php" method="POST">
+    <label for="patient-name">Patient Name:</label><br>
+    <input type="text" id="patient-name" name="pname"required placeholder="Enter patient's name"><br>
+
+    <label for="date">Date:</label><br>
+    <input type="date" id="date" name="date" required placeholder="Enter the date"><br>
+
+    <label for="diagnosis">Diagnosis:</label><br>
+    <textarea id="diagnosis" name="di" required placeholder="Enter patient's diagnosis status"></textarea> <br>
+
+    <label for="treatment">Treatment:</label><br>
+    <textarea id="treatment" name="treatment" required placeholder="Enter taken treatment"></textarea> <br>
+
+    <button type="button" onclick="addHistory()">Add History</button>
+  </form>
+
+  <div id="history-list"></div>
+
+  <script>
+    function addHistory() {
+      var patientName = document.getElementById("patient-name").value;
+      var date = document.getElementById("date").value;
+      var diagnosis = document.getElementById("diagnosis").value;
+      var treatment = document.getElementById("treatment").value;
+
+      var historyItem = "<h3>" + patientName + "</h3>" +
+        "<p>Date: " + date + "</p>" +
+        "<p>Diagnosis: " + diagnosis + "</p>" +
+        "<p>Treatment: " + treatment + "</p>";
+
+      var historyList = document.getElementById("history-list");
+      historyList.innerHTML += historyItem;
+
+      document.getElementById("history-form").reset();
+    }
+  </script>
+</body>
+
+</html>

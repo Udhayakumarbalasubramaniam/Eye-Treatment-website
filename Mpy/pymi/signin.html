@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+body {
+  background-image:url("https://media.istockphoto.com/id/1322220448/photo/abstract-digital-futuristic-eye.jpg?s=612x612&w=0&k=20&c=oAMmGJxyTTNW0XcttULhkp5IxfW9ZTaoVdVwI2KwK5s=");
+  background-size:cover;
+}
+
+.container {
+  width: 300px;
+  padding: 16px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 text-align="center"><u>Sign Up</u></h1>
+    <form name="my-forms" action="register.php" method="POST">
+      <label for="name"><b>Name</b></label>
+      <input type="text" placeholder="Enter your name" name="name" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter your email" name="email" required>
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter a password" name="password" required>
+
+      <label for="confirm_password"><b>Confirm Password</b></label>
+      <input type="password" placeholder="Confirm your password" name="confirm_password" required>
+
+      <button type="submit">Sign Up</button>
+      <br><br>
+      <p>If you already signed up then  <a href="login.html">Login</a></p>
+    </form>
+  </div>
+</body>
+
+</html>
